@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MY Details</title>
+    <link type="text/css" rel="stylesheet" href="../../css/reset.css">
+    <link type="text/css" rel="stylesheet" href="../../css/fontawesome_all.min.css">
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+    <script type="text/javascript">
+        let allInfos = [],
+            user_info;
+        const urlParams = new URL(location.href).searchParams;
+        const whatuser = urlParams.get('user');
+        const whatmonth = urlParams.get('month');
+
+        function get_json(whatTable, whatColumn, whatDate){
+            var result_data;
+            $.ajax({
+                type: "GET",
+                url: "get.php",
+                data: {
+                    table:whatTable,
+                    row:whatColumn,
+                    find:whatDate
+                },
+                dataType: "json",
+                async: false,
+                success : function(data){
+                    result_data = data;
+                }
+            });
+            return result_data;
+        }
+        $(function(){
+            user_info = get_json("budget_"+whatuser, "list", whatmonth);
+
+            let db_msg = user_info.message;
+            if(db_msg){
+                $(".all_list").append(`<li>${whatmonth}월 데이터가 없습니다!</li>`);
+            }
+
+            for(var i = 0; i < user_info.length; i++){
+                $(".all_list").append(`
+                    <li>
+                        <span>${user_info[i].dates}</span>
+                        <span>${user_info[i].income}</span>
+                        <span>${user_info[i].income_target}</span>
+                        <span>${user_info[i].outcome}</span>
+                        <span>${user_info[i].outcome_target}</span>
+                        <span>${user_info[i].af_balance}</span>
+                    </li>
+                `);
+            }
+        })
+    </script>
+    <style type="text/css">
+        .container {}
+        .container ul {}
+        .container ul li {}
+        .container .link_con {margin: 40px 0 0 0; text-align: center;}
+        .container .link_con a {color: #222; text-decoration: none; padding: 5px 20px; background: #fff; box-shadow: 0 0 6px 2px rgba(27, 54, 93 ,0.15); font-size: 1rem;}
+    </style>
+</head>
+<body>
+    <div class="container">
+        <ul class="all_list"></ul>
+        <div class="link_con">
+            <a href="javascript:history.back();">돌아가기</a>
+        </div>
+    </div>
+</body>
+</html>

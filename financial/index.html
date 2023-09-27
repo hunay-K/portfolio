@@ -1,0 +1,61 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+        <meta http-equiv="Last-Modified" content="Sun,30 Jun 2023 16:00">
+        <meta name="Keywords" content="hunay, studio, design, development, front-end">
+        <title>Budget Project</title>
+        <link type="text/css" rel="stylesheet" href="../../css/reset.css">
+        <link type="text/css" rel="stylesheet" href="../../css/fontawesome_all.min.css">
+        <link type="text/css" rel="stylesheet" href="css/common.css">
+        <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+        <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+        <script type="text/javascript" src="js/common.js"></script>
+    </head>
+    <body>
+        <div class="main_con cover">
+            <div class="container">
+                <div class="title_con">
+                    <h2>Budget Project</h2>
+                    <h5>어질어질한 고물가 시대, 현명한 소비를 하자!</h5>
+                </div>
+                <div class="login_con">
+                    <div class="sub_con">
+                        <div>
+                            <span>아이디</span>
+                            <input type="text" name="user_id">
+                        </div>
+                        <div>
+                            <span>비밀번호</span>
+                            <input type="password" name="user_pass" onkeyup="enter_login(event)">
+                        </div>
+                        <a href="javascript:login()">로그인</a>
+                    </div>
+                    <a class="join" href="join.html">회원가입</a>
+                </div>
+            </div>
+            <div class="notice_con">
+                <h5>This is Demo</h5>
+                <p>이 페이지는 포트폴리오를 위해 만든 프로젝트중 하나로 <br>이 프로젝트를 통해 얻은 모든 정보들은 영리 목적으로 활용되지 않음을 밝힙니다.</p>
+                <div>
+                    <label>
+                        <input type="checkbox" name="dontopen24">
+                        <span>24시간 동안 보지 않기</span>
+                    </label>
+                    <a href="javascript:couponClose();">계속하기</a>
+                </div>
+            </div>
+        </div>
+        <div id="account_book" class="wrap">
+            <div class="width_con">
+                <div class="btn arrow btn_left"><i class="fas fa-chevron-left"></i></div>
+                <div class="cont con_1"></div>
+                <div class="btn arrow btn_right"><i class="fas fa-chevron-right"></i></div>
+            </div>
+            <div class="link_con">
+                <a href="javascript:;">전체 목록 보기</a>
+            </div>
+        </div>
+    </body>
+</html>

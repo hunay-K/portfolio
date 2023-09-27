@@ -1,0 +1,16 @@
+@charset "UTF-8";
+
+body .guide_line {position: fixed; height:100%; width:100%; top:0; left:0; pointer-events: none; z-index: 99999999999999999; opacity: 0; transition: all 0.15s linear;}
+body .guide_line:before,
+body .guide_line:after,
+body .guide_line div:before,
+body .guide_line div:after,
+body .guide_line span:before,
+body .guide_line span:after {position: fixed; content:''; box-sizing: border-box; border:1px dotted #f00;}
+body .guide_line:before {top: 0; left:50%; margin: 0 0 0 -600px; width: 1200px;  height: 100%; border-top: none; border-bottom: none;}
+body .guide_line:after {top:50%; left: 0; margin: -325px 0 0 0; width: 100%; height: 650px; border-left: none; border-right: none;}
+body .guide_line div:before {top: 0; left:60px; width: calc(100% - 120px);  height: 100%; border-top: none; border-bottom: none;}
+body .guide_line div:after {top:30px; left: 0;  width: 100%; height: calc(100% - 60px); border-left: none; border-right: none;}
+body .guide_line span:before {top: 0; left:50%; margin-left:-1px; width:2px; height: 100%;}
+body .guide_line span:after {top:50%; left: 0; margin-top:-1px; width: 100%; height: 2px;}
+body .guide_line.on {opacity:0.5;}

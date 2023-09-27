@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Budget Project | 회원가입</title>
+    <link type="text/css" rel="stylesheet" href="../../css/reset.css">
+    <link type="text/css" rel="stylesheet" href="../../css/fontawesome_all.min.css">
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+    <script type="text/javascript">
+        $(function(){
+            
+        });
+
+        let allow = false;
+
+        function checking(){
+            let joinId = $("input[name='userId']").val(),
+                user_info = check_id("budget_"+joinId, joinId);
+            let db_msg = user_info.message;
+            if(db_msg){
+                alert("사용 가능한 아이디입니다!");
+                allow = true;
+            }else{
+                alert("이미 사용중인 아이디입니다.");
+                $("input[name='userId']").val("").focus();
+            }
+        }
+
+        var date = new Date();
+            calendarMonth = date.getMonth() + 1,
+            calendarToday = date.getDate(),
+            calendarYear = date.getFullYear();
+
+        let todate = String(calendarToday).padStart(2, "0");
+        const month = String(calendarMonth).padStart(2, "0");
+        let join_date = calendarYear+"-"+month+"-"+todate;
+
+        function post_json(){
+            let userId = $("input[name='userId']").val(),
+                userPass = $("input[name='passWord']").val(),
+                checkPass = $("input[name='check_passWord']").val(),
+                userName = $("input[name='userName']").val(),
+                startDate = $("input[name='startDate']").val(),
+                af_balance = $("input[name='balance']").val();
+            var formdata = $("#join").serialize();
+            formdata += "&table=budget_"+userId+"&month="+calendarMonth+"&af_balance="+af_balance;
+            if(userId == "" || userPass == ""){
+                alert("아이디와 비밀번호를 입력하세요");
+            }else if(userPass !== checkPass){
+                alert("비밀번호와 비밀번호 확인이 다릅니다");
+            }else if(af_balance == ""){
+                alert("현재 예산 잔액을 입력해주세요 (0원이어도 입력해주세요)");
+            }else if(userName == ""){
+                alert("이름을 입력해주세요");
+            }else if(startDate == ""){
+                alert("프로젝트 시작 날짜를 정해주세요");
+            }else if(allow){
+                $.ajax({
+                    type: "POST",
+                    url: "post.php",
+                    data: formdata,
+                    dataType: "json",
+                    success : function(data) {
+                        //console.log(data);
+                    }
+                });
+                alert("성공적으로 회원가입 되셨습니다!");
+                location.href = "index.html";
+            }else{
+                alert("아이디 중복확인을 해주세요");
+            }  
+        }
+        function check_id(whatTable, whatColumn){
+            var result_data;
+            $.ajax({
+                type: "GET",
+                url: "check.php",
+                data: {
+                    table:whatTable,
+                    row:whatColumn
+                },
+                dataType: "json",
+                async: false,
+                success : function(data){
+                    result_data = data;
+                }
+            });
+            return result_data;
+        }
+    </script>
+    <style type="text/css">
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap');
+        body {width: 100%; height: 100vh; font-family: 'Noto Sans KR', sans-serif;}
+        .section {display: flex; justify-content: center; width: 100%; height: 100%; background: linear-gradient(175deg, rgba(255,228,168,1) 0%, rgba(93,208,255,1) 100%);}
+        .section .join_con {width: 600px; margin: 40px 0 0 0;}
+        .section .join_con .img_con {text-align: center;}
+        .section .join_con .img_con img {height: 150px;}
+        .section .join_con #join {}
+        .section .join_con #join .input_con {display: flex; flex-direction: column; justify-content: center; align-items: center;}
+        .section .join_con #join .input_con .sub_con {margin: 5px 0;}
+        .section .join_con #join .input_con .sub_con span {}
+        .section .join_con #join .input_con .sub_con div {position: relative; margin: 10px 0 0 0;}
+        .section .join_con #join .input_con .sub_con div input {width: 260px; height: 20px; padding: 20px 20px; border: none; border-radius: 999px;}
+        .section .join_con #join .input_con .sub_con div a {position: absolute; top: 50%; right: -85px; transform: translateY(-50%); padding: 5px 10px; background: #222; color: #fff; text-decoration: none; border-radius: 4px;}
+        .section .join_con #join .join_btn {margin: 40px 0 0 0; text-align: center;}
+        .section .join_con #join .join_btn a {color: #222; text-decoration: none; padding: 10px 40px; border-radius: 999px; font-size: 16px; font-weight: 700; transition: all 300ms ease-in-out; box-shadow: 0px 0px 10px 4px rgba(255,255,255,.3);}
+        .section .join_con #join .join_btn a:hover {background: #222; color: #fff; box-shadow: none;}
+    </style>
+</head>
+<body>
+    <div class="section">
+        <div class="join_con">
+            <div class="img_con">
+                <img src="img/img_budget_01.png" alt="회원가입 아이콘" title="회원가입">
+            </div>
+            <form id="join" action="post.php" method="post">
+                <div class="input_con">
+                    <div class="sub_con">
+                        <span>이름</span>
+                        <div>
+                            <input type="text" name="userName" placeholder="User Name">
+                        </div>
+                    </div>
+                    <div class="sub_con">
+                        <span>아이디</span>
+                        <div>
+                            <input type="text" name="userId" placeholder="User ID">
+                            <a href="javascript:checking()">중복확인</a>
+                        </div>
+                    </div>
+                    <div class="sub_con">
+                        <span>비밀번호</span>
+                        <div>
+                            <input type="password" name="passWord" placeholder="Password">
+                        </div>
+                    </div>
+                    <div class="sub_con">
+                        <span>비밀번호 확인</span>
+                        <div>
+                            <input type="password" name="check_passWord" placeholder="Check Password">
+                        </div>
+                    </div>
+                    <div class="sub_con">
+                        <span>현재 예산 잔액</span>
+                        <div>
+                            <input type="text" name="balance">
+                        </div>
+                    </div>
+                    <div class="sub_con">
+                        <span>프로젝트 시작일</span>
+                        <div>
+                            <input type="date" name="startDate">
+                        </div>
+                    </div>
+                </div>
+                <div class="join_btn">
+                    <a href="javascript:post_json()">회원가입</a>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

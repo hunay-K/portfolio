@@ -1,0 +1,14 @@
+var heritage_array = [
+    ["1976", "The beginnings", "Michel Parmigiani, a young watchmaker and restorer, opens his traditional watchmaking workshop. He restores antique timepieces and gives free rein to his creativity by creating complex horological pieces."],
+    ["1996", "Creation of the maison", "The House of Parmigiani Fleurier is created and officially inaugurated at the Beau-Rivage Palace in Lausanne on May 29. With its rich blend of expert Swiss craftsmanship and watchmaking, the brand reflects the high caliber of Michel Parmigiani’s work."],
+    ["2000", "Birth of the manufacture", "In order to create pieces that meet Michel Parmigiani’s quality criteria, the company decides to create its own manufacture. In May, the Sandoz Family Foundation acquires a highly renowned workshop that produces high-end watch cases"],
+    ["2004", "Partnership with Bugatti", "Parmigiani Fleurier signs a partnership with Bugatti, presenting a world first: the Bugatti Type 370, a timepiece assembled along a single axis, like a car engine."],
+    ["2011", "Michel Parmigiani’s 60th", "The Tonda 1950 is presented to mark Michel Parmigiani’s 60th birthday, its name evoking the year the founder was born. The brand’s first ultra-slim watch embodies the fundamental aesthetic codes designed by Michel Parmigiani."],
+    ["2020", "The Tonda GT", "Parmigiani Fleurier launches the Tonda GT. That same year, the House wins the Innovation Prize at the Geneva Watchmaking Grand Prix with the Tonda Hijri Perpetual Calendar, the first wristwatch based on the Islamic lunar calendar."]
+]
+var signature_array = [
+    ["0", "Tonda Chronor", "The holy grail of an accomplished watch manufacture To mark its 20th anniversary in 2016, Parmigiani Fleurier is unveiling the Tonda Chronor Anniversaire, its new integrated chronograph movement, a feat of watchmaking that very few of today’s manufactures are capable of achieving."],
+    ["1", "Tonda Metro Politaine", "Parmigiani Fleurier continues to showcase its dedication to métiers d’art and high watchmaking with the launch of the Tonda Reine de Mai collection. Inspired by the bucolic landscape in Switzerland surrounding its manufactures and the flowers found there"],
+    ["2", "Tonda Selene", "To reflect the fact that every woman is unique, Parmigiani Fleurier presents a sumptuous new Tonda line, available in different versions to fulfil every desire. The manufacture’s watchmakers have struck a delicate balance between technical accomplishment and the finest jeweller’s art"],
+    ["3", "Toric Hemispheres Retrograde", "The Toric Hemispheres Retrograde combines an iconic collection – the first created by Michel Parmigiani – with the world of travel. Its mechanical movement with automatic winding allows for the time in two different places to be read down to the minute, thanks to its two independent time indications."]
+]

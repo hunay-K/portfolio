@@ -1,0 +1,344 @@
+<!doctype html>
+<html>
+    <head>
+        <title>McDonald's :: I'm lovin' it</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <meta name="viewport" content="width=1300, user-scalable=yes, target-densityDpi=medium-dpi">
+        <meta name="format-detection" content="telephone=no">
+        
+        <link rel="icon" href="img/macdonalds_logo.png">
+        <link type="text/css" rel="stylesheet" href="css/reset.css">
+        <link type="text/css" rel="stylesheet" href="css/fontawesome_all.min.css">
+        <link type="text/css" rel="stylesheet" href="css/common.css">
+        <link type="text/css" rel="stylesheet" href="css/main.css">
+        <link type="text/css" rel="stylesheet" href="css/slick.css">
+        <link type="text/css" rel="stylesheet" href="css/slick-theme.css">
+        
+        <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.13.2/jquery-ui.min.js"></script>
+        <script type="text/javascript" src="js/menu_array.js"></script>
+        <script type="text/javascript" src="js/heritage_array.js"></script>
+        <script type="text/javascript" src="js/common.js"></script>
+        <script type="text/javascript" src="js/slick.min.js"></script>
+    </head>
+    <body class="scroll_lock">
+        <div class="loading_cover">
+            <div class="progress"></div>
+            <img src="img/logo_loading_cover.png">
+            <p>I'm lovin' it</p>
+        </div>
+        <div class="wrap">
+            <div class="sections section_01" id="header">
+                <div class="width_con no_padding">
+                    <a href="" class="home"><img src="img/macdonalds_logo.png" class="logo"></a>
+                    <ul class="nav">
+                        <li><a href="#visual">Home</a></li><!--
+                        --><li><a href="#menu">Menu</a></li><!--
+                        --><li><a href="#app">App</a></li><!--
+                        --><li><a href="#ingredient">Ingredients</a></li><!--
+                        --><li><a href="#heritage">Heritage</a></li><!--
+                        --><li><a href="#contact">Contact</a></li><!--
+                        --><li class="under_bar"></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="sections section_02 wait_scroll" id="visual">
+                <iframe id="video_con" src="https://www.youtube.com/embed/psi8ratkTkM?autoplay=1&rel=0&mute=1&showinfo=0&controls=0&loop=1&disablekb=1&
+                " frameborder="0"></iframe>
+                <script>
+                    setInterval(function(){
+                        $("#video_con").attr("src",$("#video_con").attr("src"));
+                    }, 29 * 1000)
+                </script>
+                <img src="img/guide_ratio_16_9.png" class="guide_ratio">
+                <div class="width_con no_padding">
+                    <div class="title_con invert">
+                        <h2>Do you want to eat it deliciously?</h2>
+                        <h1>Enjoy meals to share</h1>
+                        <h3>Fresh ingredients that have been raised strictly<br>and meticulously through everyone's efforts<br>are gathered to finally<br>become a delicious McDonald's burger</h3>
+                    </div>
+                </div>
+                <div class="show_trigger"></div>
+            </div>
+            <div class="sections section_03 wait_scroll" id="menu">
+                <div class="yellow_box"></div>
+                <div class="width_con">
+                    <span class="top_text">MENU</span>
+                    <ul class="tab_menu">
+                        <li class="on" data-cate="be">Best</li><!--
+                     --><li data-cate="bu">Burger</li><!--
+                     --><li data-cate="sd">Side &amp; Desserts</li><!--
+                     --><li data-cate="sn">Happy Snack</li><!--
+                     --><li data-cate="cb">McCafe &amp; Beverages</li>
+                    </ul>
+                    <div class="menu_box">
+                        <div class="y_bg"></div>
+                        <div class="main_img"></div>
+                        <div class="title_con">
+                           <h3>Beef Patties</h3>
+                           <h2>big mac</h2>
+                           <h4>A double layer of sear-sizzled 100% pure beef mingled with a special sauce on a sesame seed bun and topped with melty cheese, crisp lettuce, minced onions and tangy pickles.</h4>
+                        </div>
+                        <a class="btns btn_a">More View</a>
+                        <ul class="menu_slide"></ul>
+                    </div>
+                </div>
+                <div class="show_trigger"></div>
+            </div>
+            <div class="sections section_04 wait_scroll" id="app">
+                <div class="width_con">
+                    <div class="title_con">
+                        <h3>Easy ordering</h3>
+                        <h2>HOW TO ORDER?</h2>
+                        <h4>Get free large Fries with coke when you download the McDonald’s app<br>and join My McDonald’s Rewards.<br>Then, unlock free McDonald’s faves only in the app<br>with 3,000 bonus points after your first purchase.</h4>
+                    </div>
+                    <ul class="btn_down">
+                        <li><a href="javascript:;"><img src="img/app_img/btn_app_store.svg" alt="app store" title="app store"></a></li><!--
+                     --><li><a href="javascript:;"><img src="img/app_img/btn_google_play.svg" alt="google play store" title="google play store"></a></li>
+                    </ul>
+                    <div class="app_content">
+                        <img class="display loading" src="img/app_img/app_img_02.png" alt="loading display" title="loading display">
+                        <img class="cover_right loading" src="img/app_img/app_img_06.png" alt="iphone cover" title="iphone cover">
+                        <img class="main" src="img/app_img/app_img_01.png" alt="app main" title="app main">
+                        <div class="time_text"></div>
+                        <div class="time_text_02"></div>
+                        <img class="character shadow" src="img/app_img/app_img_03_1.png" alt="" title="" style="margin: 50px 0 0 -85px;">
+                        <img class="character" src="img/app_img/app_img_03.png" alt="mcdonald's character" title="mcdonald's character">
+                        <img class="cover_left loading" src="img/app_img/app_img_05.png" alt="iphone cover" title="iphone cover">
+                        <img class="loading" src="img/app_img/app_img_07.png" alt="" title="">
+                    </div>
+                </div>
+                <div class="show_trigger"></div>
+            </div>
+            <div class="sections section_05 wait_scroll" id="ingredient">
+                <div class="bg_con on" style="background-image: url(img/ingredient_img/bg_ingredient_01.jpg); background-attachment: fixed; background-size: cover; background-position: 50%; background-repeat: no-repeat;">
+                    <div class="width_con">
+                        <div class="title_con center">
+                            <h3>100% pure beef patties grown in clean areas of Australia</h3>
+                            <h2>Food Story</h2>
+                            <h4>McDonald's beef patties are only made from 100% pure beef grown on<br>clean Australian Mother Nature, and no additives or preservatives have been used.</h4>
+                            <a class="btns btn_a">More View</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg_con" style="background-image: url(img/ingredient_img/bg_ingredient_02.jpg); background-attachment: fixed; background-size: cover; background-position: 50%; background-repeat: no-repeat;">
+                    <div class="width_con">
+                        <div class="title_con center">
+                            <h3>Serve excellent agricultural quality Fresh lettuce</h3>
+                            <h2>Food Story</h2>
+                            <h4>Check carefully whether the water in the farmland is clean, whether the soil is rich in nutrients,<br>or if there are no pollutants around the farmland</h4>
+                            <a class="btns btn_a">More View</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg_con" style="background-image: url(img/ingredient_img/bg_ingredient_03.jpg); background-attachment: fixed; background-size: cover; background-position: 50%; background-repeat: no-repeat;">
+                    <div class="width_con">
+                        <div class="title_con center">
+                            <h3>Hamburger bread that is baked and delivered every day</h3>
+                            <h2>Food Story</h2>
+                            <h4>The hamburger bread used by McDonald's is a factory that has been certified by<br>the International Food Safety Association (GFSI)</h4>
+                            <a class="btns btn_a">More View</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg_con" style="background-image: url(img/ingredient_img/bg_ingredient_04.jpg); background-attachment: fixed; background-size: cover; background-position: 50%; background-repeat: no-repeat;">
+                    <div class="width_con">
+                        <div class="title_con center">
+                            <h3>100% domestic tomatoes that we grew healthy on our land</h3>
+                            <h2>Food Story</h2>
+                            <h4>McDonald's is a 100% domestic product that has been carefully cultivated and<br>harvested on our land, good soil I only use tomatoes.</h4>
+                            <a class="btns btn_a">More View</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg_con" style="background-image: url(img/ingredient_img/bg_ingredient_05.jpg); background-attachment: fixed; background-size: cover; background-position: 50%; background-repeat: no-repeat;">
+                    <div class="width_con">
+                        <div class="title_con center">
+                            <h3>High quality domestic 1+ grade eggs</h3>
+                            <h2>Food Story</h2>
+                            <h4>After careful hygiene, such as surface cleaning and UV sterilization,<br>it is refrigerated at 7°C</h4>
+                            <a class="btns btn_a">More View</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg_con" style="background-image: url(img/ingredient_img/bg_ingredient_06.jpg); background-attachment: fixed; background-size: cover; background-position: 50%; background-repeat: no-repeat;">
+                    <div class="width_con">
+                        <div class="title_con center">
+                            <h3>New Zealand grazing cheese full of cheese's natural flavor</h3>
+                            <h2>Food Story</h2>
+                            <h4>Made from the source of grazing cows in the meadows of clean New Zealand<br>It is full of the natural flavor of cheese and boasts a savory and rich taste.</h4>
+                            <a class="btns btn_a">More View</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg_con" style="background-image: url(img/ingredient_img/bg_ingredient_07.jpg); background-attachment: fixed; background-size: cover; background-position: 50%; background-repeat: no-repeat;">
+                    <div class="width_con">
+                        <div class="title_con center">
+                            <h3>Fresh onions from HACCP-certified facilities</h3>
+                            <h2>Food Story</h2>
+                            <h4>l onions used at McDonald's are supplied more safely and<br>fresh through vacuum packaging after thorough sterilization</h4>
+                            <a class="btns btn_a">More View</a>
+                        </div>
+                    </div>
+                </div>
+                <ul class="fade_po"></ul>
+                <div class="show_trigger"></div>
+            </div>
+            <div class="sections section_06 wait_scroll" id="event">
+                <div class="width_con">
+                    <ul class="v_con">
+                        <li class="event_01">
+                            <div class="event_img"><img src="img/event_img/event_01.jpg" alt="french fry" title="french fry"></div>
+                            <span class="event_text">
+                                <h3>FRENCH FRY</h3>
+                                <h4>The Best French Fries in the World We fry fresh potatoes You can taste the world's best fries anywhere in the world</h4>
+                                <a class="btns btn_a">More View</a>
+                            </span>
+                        </li><!--
+                     --><li class="event_02">
+                            <div class="event_img"><img src="img/event_img/event_02.jpg" alt="all day" title="24hour open"></div>
+                            <span class="event_text">
+                                <h3>ALL DAY</h3>
+                                <h4>McDonald's with you at even midnight We are open 24 hours a day, so you can always find McDonald's even midnight</h4>
+                                <a class="btns btn_a">More View</a>
+                            </span>
+                        </li>
+                        <li class="event_03">
+                            <div class="event_img"><img src="img/event_img/event_03.jpg" alt="mc cafe" title="mc coffee"></div>
+                            <span class="event_text">
+                                <h3>MC CAFE</h3>
+                                <h4>You can order coffee too in mcdonlad's always have fun, enjoy McCafe and various drinks casually!</h4>
+                                <a class="btns btn_a">More View</a>
+                            </span>
+                        </li><!--
+                     --><li class="event_04">
+                            <div class="event_img"><img src="img/event_img/event_04.jpg" alt="mc picnic" title="picnic"></div>
+                            <span class="event_text">
+                                <h3>MC PICNIC</h3>
+                                <h4>The picnic with McDonald's is more enjoyable. Have a good time using McDelivery with your loved ones!</h4>
+                                <a class="btns btn_a">More View</a>
+                            </span>
+                        </li>
+                    </ul>
+                    <div class="title_con">
+                        <h3>Latest news and various</h3>
+                        <h2>EVENT</h2>
+                        <h4>We have been holding regular events<br>since the opening.<br>This year 2022 is the most meaningful year of all.<br>Because it is a historic year when McDonald's<br>and Korea collaborated.</h4>
+                        <a class="btns btn_b">View Past Events</a>
+                    </div>
+                </div>
+                <div class="show_trigger"></div>
+            </div>
+            <div class="sections section_07 wait_scroll" id="heritage">
+                <div class="width_con">
+                    <div class="title_con">
+                        <h3>Brand</h3>
+                        <h2>heritage</h2>
+                        <h4>Arguably one of the most impressive elements of McDonald's<br>corporate history is how little modern history it has.<br>During its first decades, McDonald's worked to establish<br>its business model and brand.</h4>
+                    </div><!--
+                 --><div class="main_img"></div>
+                    <ul class="btn_year">
+                        <li class="on">1940</li>
+                        <li>1955</li>
+                        <li>1974</li>
+                        <li>1988</li>
+                        <li>2006</li>
+                        <li>2013</li>
+                    </ul>
+                    <span class="text_box">
+                        <h3>1940</h3>
+                        <h4>McDonald's started a restaurant called 'Airdrome', which means 'airfield' in Huntington Drive (USA 66) near Monrovia Airport, California, USA. At that time, a hamburger was 10 cents and an orange juice was 5 cents. In the same year, his two sons, Maurice and Richard, moved to 1398 North E Street in western San Bernardino, California, 40 miles east of the original restaurant, and renamed the restaurant "McDonald's Barbecue."</h4>
+                    </span>
+                </div>
+                <div class="show_trigger"></div>
+            </div>
+            <div class="sections section_08 wait_scroll" id="instagram">
+                <div class="width_con">
+                    <div class="title_con center">
+                        <h3>Click the heart to like</h3>
+                        <h2>INSTAGRAM</h2>
+                        <h4>This is a place to share daily life and news.<br>Any news about McDonald's doesn't matter!<br>News you want to share with others, favorite menus, stores, etc.</h4>
+                    </div>
+                    <ul class="v_con">
+                        <li><img src="img/instagram_img/img_instagram_01.jpg" alt="instagram photo" title="instagram photo"><div class="insta" ><img src="img/instagram_img/user_photo/img_user_01.jpg" alt="instagram user"></div><span>chang_ju</span></li><!--
+                     --><li><img src="img/instagram_img/img_instagram_02.jpg" alt="instagram photo" title="instagram photo"><div class="insta"><img src="img/instagram_img/user_photo/img_user_02.jpg" alt="instagram user" title="instagram user"></div><span>mh_bass</span></li><!--
+                     --><li><img src="img/instagram_img/img_instagram_03.jpg" alt="instagram photo" title="instagram photo"><div class="insta"><img src="img/instagram_img/user_photo/img_user_03.jpg" alt="instagram user" title="instagram user"></div><span>hong1take</span></li><!--
+                     --><li><img src="img/instagram_img/img_instagram_04.jpg" alt="instagram photo" title="instagram photo"><div class="insta"><img src="img/instagram_img/user_photo/img_user_04.jpg" alt="instagram user" title="instagram user"></div><span>khankws_</span></li><!--
+                     --><li><img src="img/instagram_img/img_instagram_05.jpg" alt="instagram photo" title="instagram photo"><div class="insta"><img src="img/instagram_img/user_photo/img_user_05.jpg" alt="instagram user" title="instagram user"></div><span>dlwlrma</span></li><!--
+                     --><li><img src="img/instagram_img/img_instagram_06.jpg" alt="instagram photo" title="instagram photo"><div class="insta"><img src="img/instagram_img/user_photo/img_user_06.jpg" alt="instagram user" title="instagram user"></div><span>xxxibgdrgn</span></li><!--
+                     --><li><img src="img/instagram_img/img_instagram_07.jpg" alt="instagram photo" title="instagram photo"><div class="insta"><img src="img/instagram_img/user_photo/img_user_07.jpg" alt="instagram user" title="instagram user"></div><span>skuukzky</span></li><!--
+                     --><li><img src="img/instagram_img/img_instagram_08.jpg" alt="instagram photo" title="instagram photo"><div class="insta"><img src="img/instagram_img/user_photo/img_user_08.jpg" alt="instagram user" title="instagram user"></div><span>jparkitrighthere</span></li><!--
+                     --><li><img src="img/instagram_img/img_instagram_09.jpg" alt="instagram photo" title="instagram photo"><div class="insta"><img src="img/instagram_img/user_photo/img_user_09.jpg" alt="instagram user" title="instagram user"></div><span>crush9244</span></li><!--
+                     --><li><img src="img/instagram_img/img_instagram_10.jpg" alt="instagram photo" title="instagram photo"><div class="insta"><img src="img/instagram_img/user_photo/img_user_10.jpg" alt="instagram user" title="instagram user"></div><span>skawngur</span></li><!--
+                     --><li><img src="img/instagram_img/img_instagram_11.jpg" alt="instagram photo" title="instagram photo"><div class="insta"><img src="img/instagram_img/user_photo/img_user_11.jpg" alt="instagram user" title="instagram user"></div><span>heybiblee</span></li><!--
+                     --><li><img src="img/instagram_img/img_instagram_12.jpg" alt="instagram photo" title="instagram photo"><div class="insta"><img src="img/instagram_img/user_photo/img_user_12.jpg" alt="instagram user" title="instagram user"></div><span>woosiq</span></li>
+                    </ul>
+                    <a class="btns btn_b">View More Stories</a>
+                </div>
+                <div class="show_trigger"></div>
+            </div>
+                    <script>
+                        $("#instagram.section_08 .width_con ul.v_con").slick({
+                            infinite: true,
+                            slidesToShow: 6,
+                            slidesToScroll: 2,
+                            swipeToSlide: true
+                        })
+                    </script>
+            <div class="sections section_09 wait_scroll" id="contact">
+                <iframe id="map_con" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2970.443654019618!2d-87.65280812272137!3d41.8833149216968!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x880e2cd98178b831%3A0x663df746f8a99620!2sMcDonald%E2%80%99s%20Global%20Menu%20Restaurant!5e0!3m2!1sen!2skr!4v1663915509835!5m2!1sen!2skr"></iframe>
+                <div class="width_con">
+                    <div class="contact_box box_content_text">
+                        <div class="title_con">
+                            <h2 class="first">Contact</h2>
+                            <h3 class="second"><i class="far fa-fw fa-map-marker-alt"></i>Corporate Address</h3>
+                            <h4 class="thrd">McDonald's Corporation<br>110 N. Carpenter St.<br>Chicago, IL 60607</h4>
+                            <h3 class="forth"><i class="far fa-fw fa-clock"></i>Press Contacts</h3>
+                            <h4 class="fith">McDonald’s Media Relations department is staffed<br>Monday through Friday between 8 a.m. and 5:30 p.m.<br>Central Time. An appropriate spokesperson will    respond<br>to media inquiries as soon as possible, within business hours.</h4>
+                            <h4 class="sixth"><i class="far fa-fw fa-phone-alt"></i>+ 1800-244-6227</h4>
+                            <h4 class="sevnth"><a href="mailto:someone@yoursite.com?subject=press@us.mcd.com"><i class="far fa-fw fa-envelope"></i>press@us.mcd.com</a></h4>
+                        </div>
+                    </div>
+                    <div class="pin"><i></i></div>
+                </div>
+                <div class="show_trigger"></div>
+            </div>
+            <div class="sections section_10" id="nowar">
+                <div class="width_con no_padding">
+                    <div class="bg">
+                        <h3>NOWAR</h3>
+                        <h4>Has caused unspeakable suffering to innocent people</h4>
+                    </div>
+                </div>
+            </div>
+            <div class="sections section_11" id="footer">
+                <div class="width_con">
+                    <ul class="footer_main">
+                        <li><a href="javascript:;">Terms &amp; Conditions</a></li><!--
+                     --><li><a href="javascript:;">Customer Inquiry</a></li><!--
+                     --><li><a href="javascript:;">Privacy Policy</a></li><!--
+                     --><li><a href="javascript:;">California Privacy Notice</a></li>
+                    </ul>
+                    <ul class="footer_sub">
+                        <li>McDonald's Corporation</li>
+                        <li>Address : <b>110 N Carpenter StChicago, IL 60607</b></li>
+                        <li>Press Contacts : <b>press@us.mcd.com   +1 800-244-6227</b></li>
+                        <li>Staffed <b>Monday</b> through <b>Friday</b> between <b>8 a.m.</b> and <b>5:30 p.m</b></li>
+                    </ul>
+                    <ul class="footer_icons">
+                        <li><a href="javascript:;"><span class="facebook"></span></a></li><!--
+                     --><li><a href="javascript:;"><span class="instagram"></span></a></li><!--
+                     --><li><a href="javascript:;"><span class="twitter"></span></a></li><!--
+                     --><li><a href="javascript:;"><span class="youtube"></span></a></li>
+                    </ul>
+                    <ul class="copyright">
+                        <li><img src="img/macdonalds_logo.png" alt="맥도날드 로고" title="맥도날드 로고">Copyright 2022 MCDonald's</li>
+                        <li>Powered By B1A4</li>
+                    </ul>
+                    <img class="sp_logo_img" src="img/sp_logo.png">
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

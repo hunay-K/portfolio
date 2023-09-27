@@ -1,0 +1,403 @@
+<!doctype html>
+<html>
+    <head>
+        <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+        <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+        <link type="text/css" rel="stylesheet" href="css/fontawesome_all.min.css">
+        <link rel=icon href="img/img_favicon.png">
+        <title>Parmigiani :: Style Guide</title>
+        <style>
+            @charset "UTF-8";
+            @import url('https://fonts.googleapis.com/css2?family=Playfair+Display+SC&family=Poppins:wght@100;300;400;500;600;700&display=swap');
+            @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&display=swap');
+            @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700&display=swap');
+            * {margin: 0; padding: 0; vertical-align: top;}
+            body {background: #222; font-family: 'Poppins'; color: #fff;}
+            ul, li, ol {list-style: none;}
+            a {text-decoration: none;}
+            
+            h3 {margin: 0 0 -10px 0; font-family: 'Playfair Display', serif; font-size: 60px; font-weight: 400; color: #d1b387;}
+            h2 {margin: 0 0 20px 0; font-size: 100px; font-weight: 400;}
+            h4 {position: relative; font-family: 'Playfair Display', serif; font-size: 52px; font-weight: 400;}
+            h4:before {position: absolute; top: -10px; left: 0; content: ''; width: 76px; height: 10px; background: #d1b387;}
+            h5 {font-size: 50px; font-weight: 300;}
+            h6 {margin: 10px 0 0 0; font-size: 40px; font-weight: 600;}
+            .sections {position: relative; width: 1600px; height: 900px; margin: 0 auto; border-top: none;}
+            .width_con {position: absolute; top: 50%; left: 50%; width: 1500px; height: 800px; transform: translate(-50%, -50%);}
+            .width_con .bd {width: 100%; height: 2px; background: #fff;}
+            
+            .section_01 {background: url(img/sty/img_sty_01.jpg) 50% no-repeat; background-size: cover;}
+            .section_01 .title_con {padding: 130px 0 0 220px;}
+            .section_01 .copy {position: absolute; left: 500px; bottom: 120px; font-size: 30px; font-weight: 600;}
+            
+            .section_02 {background: url(img/sty/img_sty_02.jpg) 50% no-repeat; background-size: cover;}
+            .section_02 .table {width: 800px; margin: 0 0 0 600px; padding: 100px 40px 0;}
+            .section_02 .table h2 {font-size: 70px; font-weight: 600; border-bottom: 2px solid #d1b387; text-align: center;}
+            .section_02 .table ul {}
+            .section_02 .table ul li {position: relative; margin: 60px 0 0 0;}
+            .section_02 .table ul li h5 {display: inline-block; *display: inline; *zoom: 1;}
+            .section_02 .table ul li p {position: absolute; right: 0; bottom: 0; font-size: 24px; font-weight: 300;}
+            
+            .section_03 {background: url(img/sty/img_sty_03.jpg) 50% no-repeat; background-size: cover;}
+            .section_03 .width_con {}
+            .section_03 .width_con h6 {}
+            .section_03 .width_con .desc {margin: 100px 0 0 0; font-family: 'Noto Sans KR', sans-serif;}
+            .section_03 .width_con .desc img {}
+            .section_03 .width_con .desc p {margin: 0 0 40px 0; font-size: 24px; font-weight: 700;}
+            .section_03 .width_con .desc span {line-height: 1.25em;}
+            
+            .section_04 {}
+            .section_04 .width_con {}
+            .section_04 .width_con h6 {}
+            .section_04 .width_con .clr_con {margin: 50px 0 0 0;}
+            .section_04 .width_con .clr_con .clr_box {display: inline-block; *display: inline; *zoom: 1; margin: 0 25px;}
+            .section_04 .width_con .clr_con .clr_box .main_clr {margin: 80px 0 0 0;}
+            .section_04 .width_con .clr_con .clr_box .main_clr li {position: relative; display: inline-block; *display: inline; *zoom: 1; vertical-align: middle;}
+            .section_04 .width_con .clr_con .clr_box .main_clr li p {position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); font-size: 18px; font-weight: 600; text-align: center; z-index: 1;}
+            .section_04 .width_con .clr_con .clr_box .main_clr li:last-child {margin: 0 0 0 20px;}
+            .section_04 .width_con .clr_con .clr_box .main_clr li .clr_c {position: relative; border-radius: 50%; border: 4px solid #827054;}
+            .section_04 .width_con .clr_con .clr_box .main_clr li .clr_c.main {width: 220px; height: 220px;}
+            .section_04 .width_con .clr_con .clr_box .main_clr li .clr_c.sub {width: 150px; height: 150px;}
+            .section_04 .width_con .clr_con .clr_box .main_clr li .clr_c div {position: absolute; top: 0; left: 50%; width: 3px; height: 100%;}
+            .section_04 .width_con .clr_con .clr_box .main_clr li .clr_c div:before {position: absolute; top: 0; left: 0; content: ''; width: 3px; height: 10px; background: #827054;}
+            .section_04 .width_con .clr_con .clr_box .main_clr li .clr_c.main_02 div:before {background: #d1b387;}
+            .section_04 .width_con .clr_con .clr_box .main_clr li .clr_c.sub_1_01 div:before {background: #fff;}
+            .section_04 .width_con .clr_con .clr_box .main_clr li .clr_c.sub_1_02 {background: #fff;}
+            .section_04 .width_con .clr_con .clr_box .main_clr li .clr_c.sub_1_02 div:before {background: #000;}
+            .section_04 .width_con .clr_con .clr_box .main_clr li .clr_c.sub_2_01 div:before {background: #222;}
+            .section_04 .width_con .clr_con .clr_box .main_clr li .clr_c.sub_2_01 {background: #fff;}
+            .section_04 .width_con .clr_con .clr_box .main_clr li .clr_c.sub_2_02 div:before {background: #eee;}
+            .section_04 .width_con .clr_con .clr_box .main_clr li table {}
+            .section_04 .width_con .clr_con .clr_box .main_clr li table .clr_t {padding: 0 30px 0 0; text-align: right;}
+            
+            .section_05 {}
+            .section_05 .width_con {}
+            .section_05 .width_con .bd {}
+            .section_05 .width_con h6 {}
+            .section_05 .width_con .typo_con {margin: 60px 0 0 0;}
+            .section_05 .width_con .typo_con .typo_box {width: 40%; display: inline-block; *display: inline; *zoom: 1;}
+            .section_05 .width_con .typo_con .typo_box .bd {margin: 30px 0 0 0;}
+            .section_05 .width_con .typo_con .play_dis {margin: 0 290px 0 0; font-family: 'Playfair Display', serif;}
+            .section_05 .width_con .typo_con .play_dis h3 {font-size: 80px; color: #fff;}
+            .section_05 .width_con .typo_con .play_dis span {display: block; margin: 20px 0 0 0; font-size: 16px;}
+            .section_05 .width_con .typo_con .play_dis span p {font-size: 22px;}
+            .section_05 .width_con .typo_con .play_dis h5 {margin: 40px 0 0 0; font-size: 44px; font-weight: 400;}
+            .section_05 .width_con .typo_con .play_dis h6 {font-size: 16px; font-weight: 600;}
+            .section_05 .width_con .typo_con .poppins {}
+            .section_05 .width_con .typo_con .poppins .bd {margin: 17px 0 0 0;}
+            .section_05 .width_con .typo_con .poppins h3 {font-family: 'Poppins'; font-size: 80px; font-weight: 700; color: #fff;}
+            .section_05 .width_con .typo_con .poppins span {display: block; margin: 20px 0 0 0; font-size: 16px;}
+            .section_05 .width_con .typo_con .poppins span p {font-size: 22px;}
+            .section_05 .width_con .typo_con .poppins h5 {margin: 45px 0 0 0; font-size: 22px; font-weight: 400;}
+            .section_05 .width_con .typo_con .poppins h6 {font-size: 14px; font-weight: 500;}
+            .section_05 .width_con .typo_con .poppins p {font-size: 13px; font-weight: 400;}
+            
+            .section_06 {background: url(img/sty/img_sty_05.jpg) 50% no-repeat; background-size: cover;}
+            .section_06 .width_con {}
+            .section_06 .width_con .btn_con {margin: 60px 0 0 0;}
+            .section_06 .width_con .btn_con > h5 {display: inline-block; *display: inline; *zoom: 1; margin: 0 100px 0 0; font-size: 28px; font-weight: 700;}
+            .section_06 .width_con .btn_con .btn_box {display: inline-block; *display: inline; *zoom: 1;}
+            .section_06 .width_con .btn_con .btn_box h5 {margin: 0 0 40px 0; font-size: 24px; font-weight: 600;}
+            .section_06 .width_con .btn_con .btn_box ul{margin: 0 0 40px 0;}
+            .section_06 .width_con .btn_con .btn_box ul li {display: inline-block; *display: inline; *zoom: 1; margin: 0 40px; 0 0;}
+            .section_06 .width_con .btn_con .btn_box ul li p {font-size: 16px;}
+            .section_06 .width_con .btn_con .btn_box ul li img {}
+            .section_06 .width_con .btn_con .btn_box .no_hover li:hover img {filter: invert(46%) sepia(34%) saturate(356%) hue-rotate(357deg) brightness(89%) contrast(87%);}
+            .section_06 .width_con .icon_con {margin: 60px 0 0 0;}
+            .section_06 .width_con .icon_con h5 {display: inline-block; *display: inline; *zoom: 1; margin: 0 100px 0 0; font-size: 28px; font-weight: 700;}
+            .section_06 .width_con .icon_con .icon_box {display: inline-block; *display: inline; *zoom: 1;}
+            .section_06 .width_con .icon_con .icon_box ul {}
+            .section_06 .width_con .icon_con .icon_box ul li {display: inline-block; *display: inline; *zoom: 1; margin: 0 40px; 0 0; text-align: center;}
+            .section_06 .width_con .icon_con .icon_box ul li a {position: relative; display: block; margin: 0 0 20px 0;}
+            .section_06 .width_con .icon_con .icon_box ul li a:before {font-family: "Font Awesome 5 Brands"; font-weight: 400; color: #999; font-size: 26px; transition: all .1s linear;}
+            .section_06 .width_con .icon_con .icon_box ul li a:hover:before {color: #d1b387;}
+            .section_06 .width_con .icon_con .icon_box ul li a.facebook:before {content: '\f39e';}
+            .section_06 .width_con .icon_con .icon_box ul li a.instagram:before {content: '\f16d';}
+            .section_06 .width_con .icon_con .icon_box ul li a.youtube:before {content: '\f167';}
+            .section_06 .width_con .icon_con .icon_box ul li a.plus:before {font-family: "Font Awesome 5 Pro"; content: '\f00e'; color: #fff;}
+            .section_06 .width_con .icon_con .icon_box ul li a p {display: block;}
+            
+            .section_07 {}
+            .section_07 .width_con {}
+            .section_07 .width_con > * {position: absolute; left: 50%; transform: translateX(-50%);}
+            .section_07 .width_con h3 {top: 0; color: #fff;}
+            .section_07 .width_con h2 {top: 50%; color: #d1b387; font-size: 180px; font-weight: 700; transform: translate(-50%, -50%);}
+            .section_07 .width_con h4 {bottom: 0; font-family: 'Poppins'; font-size: 30px; font-weight: 700;}
+            .section_07 .width_con h4:before {display: none;}
+            
+        </style>
+        <script>
+            $(function(){
+                for(i = 0; i < 12; i++){
+                    $(".section_04 .width_con .clr_con .clr_box .main_clr li .clr_c").append("<div style='transform: rotate("+(i*30)+"deg) translateX(-50%)'></div>")
+                }
+            });
+        </script>
+    </head>
+    <body>
+        <div class="wrap">
+            <div class="sections section_01">
+                <div class="title_con">
+                    <h3>Parmigiani Fleurier</h3>
+                    <h2><b>Style</b> Guide</h2>
+                    <h4>Design Menual</h4>
+                </div>
+                <h2 class="copy">Hunay Studio</h2>
+            </div>
+            <div class="sections section_02">
+                <div class="table">
+                    <h2>TABLE OF CONTENTS</h2>
+                    <ul>
+                        <li><h5>CONCEPT</h5><p>01</p></li>
+                        <li><h5>COLORS</h5><p>02</p></li>
+                        <li><h5>TYPOGRAPHY</h5><p>03</p></li>
+                        <li><h5>UI ELEMENTS</h5><p>04</p></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="sections section_03">
+                <div class="width_con">
+                    <div class="bd"></div>
+                    <h6>01 - Concept</h6>
+                    <div class="desc">
+                        <img src="img/sty/img_sty_04.png" alt="logo" title="logo">
+                        <p>파르미지아니 플러리에는 캐비노티에 미셸 파르미지아니가<br>스위스 제네바의 로잔에서 1996년 5월 29일에 세운 브랜드입니다.</p>
+                        <span>하이엔드 시계 브랜드에 걸맞는 고급스러운 분위기를 주 컨셉으로 잡았습니다.<br>파르미지아니 플러리에만의 시계 느낌을 최대한 살려 레이아웃을 구성하였고<br>한치의 오차도 없이 시간을 정확히 맞추는 시계처럼<br>웹사이트 또한 정확하게 설계하려 노력했습니다.<br><br>PC뿐만 아니라 모바일에서도 사용자가 웹사이트를 편하게 볼 수 있도록<br>사용자의 웹 접근 디바이스에 따라 레이아웃이 변하는<br><b>반응형 웹으로 설계하였습니다.</b></span>
+                    </div>
+                </div>
+            </div>
+            <div class="sections section_04">
+                <div class="width_con">
+                    <div class="bd"></div>
+                    <h6>02 - Colors</h6>
+                    <div class="clr_con">
+                        <div class="clr_box">
+                            <ul class="main_clr">
+                                <li><p style="color: #827054">Main</p><div class="clr_c main"></div></li><!--
+                             --><li>
+                                    <table>
+                                        <tr>
+                                            <td class="clr_t">HEX</td>
+                                            <td>#827054</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="clr_t">RGB</td>
+                                            <td>230, 112, 84</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="clr_t">HSB</td>
+                                            <td>37°, 35%, 51%</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="clr_t">CMYK</td>
+                                            <td>45%, 48%, 69%, 19%</td>
+                                        </tr>
+                                    </table>
+                                </li>
+                            </ul>
+                            <ul class="main_clr">
+                                <li><p style="color: #d1b387">Main<br>(on dark)</p><div class="clr_c main main_02" style="border: 4px solid #d1b387;"></div></li><!--
+                             --><li>
+                                    <table>
+                                        <tr>
+                                            <td class="clr_t">HEX</td>
+                                            <td>#d1b387</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="clr_t">RGB</td>
+                                            <td>209, 179, 165</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="clr_t">HSB</td>
+                                            <td>36°, 35%, 82%</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="clr_t">CMYK</td>
+                                            <td>19%, 28%, 51%, 0%</td>
+                                        </tr>
+                                    </table>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="clr_box">
+                            <ul class="main_clr">
+                                <li><p style="color: #fff">Sub</p><div class="clr_c sub sub_1_01" style="border: 4px solid #fff;"></div></li><!--
+                             --><li>
+                                    <table>
+                                        <tr>
+                                            <td class="clr_t">HEX</td>
+                                            <td>#FFFFFF</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="clr_t">RGB</td>
+                                            <td>255, 255, 255</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="clr_t">HSB</td>
+                                            <td>0°, 0%, 100%</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="clr_t">CMYK</td>
+                                            <td>0%, 0%, 0%, 0%</td>
+                                        </tr>
+                                    </table>
+                                </li>
+                            </ul>
+                            <ul class="main_clr">
+                                <li><p style="color: #000">Sub</p><div class="clr_c sub sub_1_02" style="border: 4px solid #000;"></div></li><!--
+                             --><li>
+                                    <table>
+                                        <tr>
+                                            <td class="clr_t">HEX</td>
+                                            <td>#000000</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="clr_t">RGB</td>
+                                            <td>0, 0, 0</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="clr_t">HSB</td>
+                                            <td>0°, 0%, 0%</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="clr_t">CMYK</td>
+                                            <td>0%, 0%, 0%, 100%</td>
+                                        </tr>
+                                    </table>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="clr_box">
+                            <ul class="main_clr">
+                                <li><p style="color: #222">Sub</p><div class="clr_c sub sub_2_01" style="border: 4px solid #222;"></div></li><!--
+                             --><li>
+                                    <table>
+                                        <tr>
+                                            <td class="clr_t">HEX</td>
+                                            <td>#222222</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="clr_t">RGB</td>
+                                            <td>34, 34, 34</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="clr_t">HSB</td>
+                                            <td>0°, 0%, 13%</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="clr_t">CMYK</td>
+                                            <td>0%, 0%, 0%, 87%</td>
+                                        </tr>
+                                    </table>
+                                </li>
+                            </ul>
+                            <ul class="main_clr">
+                                <li><p style="color: #eee">Sub</p><div class="clr_c sub sub_2_02" style="border: 4px solid #eee;"></div></li><!--
+                             --><li>
+                                    <table>
+                                        <tr>
+                                            <td class="clr_t">HEX</td>
+                                            <td>#EEEEEE</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="clr_t">RGB</td>
+                                            <td>238, 238, 238</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="clr_t">HSB</td>
+                                            <td>0°, 0%, 93%</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="clr_t">CMYK</td>
+                                            <td>0%, 0%, 0%, 7%</td>
+                                        </tr>
+                                    </table>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="sections section_05">
+                <div class="width_con">
+                    <div class="bd"></div>
+                    <h6>03 - Typography</h6>
+                    <div class="typo_con">
+                        <div class="typo_box play_dis">
+                            <h3>Playfair Display</h3>
+                            <div class="bd"></div>
+                            <span><p>About</p><br>Playfair is a transitional design. In the European Enlightenment<br>in the late 18th century, broad nib quills were replaced by pointed<br>steel pens as the popular writing tool of the day. Together with<br>developments in printing technology, ink, and paper making,<br>it became to print letterforms of high contrast and delicate<br>hairlines that were increasingly detached from the written letterforms.</span>
+                            <h5>Main title 44px 400</h5>
+                            <h6>Subtitle 16px 600</h6>
+                        </div>
+                        <div class="typo_box poppins">
+                            <h3>Poppins</h3>
+                            <div class="bd"></div>
+                            <span><p>About</p><br>Geometric sans serif typefaces have been a popular design tool<br>ever since these actors took to the world’s stage.<br>Poppins is one of the new comers to this long tradition.<br>With support for the Devanagari and Latin writing systems,<br>it is an internationalist take on the genre.</span>
+                            <h5>Sub title 22px 400</h5>
+                            <h6>Description  14px 500</h6>
+                            <p>text (footer) 13px 400</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="sections section_06">
+                <div class="width_con">
+                    <div class="bd"></div>
+                    <h6>04 - UI Elements</h6>
+                    <div class="btn_con">
+                        <h5>Buttons</h5>
+                        <div class="btn_box">
+                            <div class="no_hover">
+                                <h5>No - hover</h5>
+                                <ul>
+                                    <li>
+                                        <p>w: 66px</p>
+                                        <p>h: 100px</p>
+                                        <p>color: #aaaaaa</p>
+                                    </li><!--
+                                 --><li><a href="javascript:;"><img src="img/signature/img_sig_no_hover_01.png" alt="nohover" title="nohover"></a></li><!--
+                                 --><li><a href="javascript:;"><img src="img/signature/img_sig_no_hover_02.png" alt="nohover" title="nohover"></a></li><!--
+                                 --><li><a href="javascript:;"><img src="img/signature/img_sig_no_hover_03.png" alt="nohover" title="nohover"></a></li><!--
+                                 --><li><a href="javascript:;"><img src="img/signature/img_sig_no_hover_04.png" alt="nohover" title="nohover"></a></li>
+                                </ul>
+                            </div>
+                            <div class="hover">
+                                <h5>Hover</h5>
+                                <ul>
+                                    <li>
+                                        <p>w: 66px</p>
+                                        <p>h: 100px</p>
+                                        <p>color: #827054</p>
+                                    </li><!--
+                                 --><li><a href="javascript:;"><img src="img/signature/img_sig_hover_01.png" alt="hover" title="hover"></a></li><!--
+                                 --><li><a href="javascript:;"><img src="img/signature/img_sig_hover_02.png" alt="hover" title="hover"></a></li><!--
+                                 --><li><a href="javascript:;"><img src="img/signature/img_sig_hover_03.png" alt="hover" title="hover"></a></li><!--
+                                 --><li><a href="javascript:;"><img src="img/signature/img_sig_hover_04.png" alt="hover" title="hover"></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="icon_con">
+                        <h5>Icons</h5>
+                        <div class="icon_box">
+                            <ul>
+                                <li><a class="facebook" href="javascript:;"></a><p>w: 16px</p><p>h: 26px</p></li><!--
+                             --><li><a class="instagram" href="javascript:;"></a><p>w: 25px</p><p>h: 25px</p></li><!--
+                             --><li><a class="youtube" href="javascript:;"></a><p>w: 28px</p><p>h: 18px</p></li><!--
+                             --><li><a class="plus" href="javascript:;"></a><p>w: 30px</p><p>h: 30px</p></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="sections section_07">
+                <div class="width_con">
+                    <h3>Parmigiani Fleurier</h3>
+                    <h2>Thanks</h2>
+                    <h4>Hunay Studio</h4>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

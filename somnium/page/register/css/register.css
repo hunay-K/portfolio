@@ -1,0 +1,38 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Domine:wght@400;500;600;700&family=Roboto:wght@400;500;700;900&display=swap');
+
+html, body {font-family: 'Roboto', sans-serif;}
+
+.bg {position: absolute; top: 0; left: 0; width:100%; height:100%; overflow: hidden; pointer-events: none; --part-size: 50px;}
+
+.fire_shaft {position: absolute; bottom: 0;}
+.particle {width: var(--part-size); aspect-ratio: 1/1; border-radius: 50%; opacity: .75; background: darkorange; position: absolute; top: 100%; filter: blur(5px); animation: burn 1s linear forwards;}
+
+@keyframes burn {
+  100% {transform: scale(.5); top: 0;  opacity: 0;}
+}
+
+label {position: relative; display: block;}
+label > span {position: absolute; top: 10px; left: 0; color: #0d6fe7; font-size: 24px; font-weight: 700;}
+input[type="text"],
+input[type="password"] {width: calc(100% - 60px); height: 24px; padding: 10px 15px; margin: 50px 0 15px; background: #dee5ee; border: 1px solid #eeeeee; vertical-align: top; font-size: 14px;}
+
+a.btn {display: inline-block; *display: inline; *zoom: 1; width: 160px; height: 40px; background: #dee5ee; line-height: 37px; text-align: center; text-decoration: none; transition: all 300ms ease-in-out;}
+a.btn.other:hover {color: #0d6fe7;}
+a.btn i {font-size: 20px; margin: 0 10px 0 0; vertical-align: middle;}
+a.btn.btn_a {width: 340px; margin: 20px 0; color: #fff; background: #0d6fe7; font-size: 20px; font-weight: 700;}
+a.btn.btn_a:hover {background: #063f86;}
+
+.register_con {position: fixed; top: 50%; right: 0; width: 50%; height: 100%; transform: translateY(-50%);}
+.register_con .info_box {position: absolute; top: 50%; left: 50%; width: 400px; height: 650px; padding: 20px; background: #f2f2f2; border: 10px solid #0d6fe7; box-sizing: border-box; transform: translate(-50%, -50%);}
+.register_con .info_box h2 {margin: 0 0 30px 0; font-family: 'Domine', serif; font-size: 32px; font-weight: 700;}
+.register_con .info_box label.ckbox {margin: 0 0 15px 0;}
+.register_con .info_box label.ckbox .cked {position: absolute; left: 5px;}
+.register_con .info_box label.ckbox .ck_text {display: inline-block; *display: inline; *zoom: 1; padding: 5px; margin: -10px 0 0 20px; cursor: pointer;}
+.register_con .info_box .create,
+.register_con .info_box .find {margin: 20px 0;}
+.register_con .info_box .create p,
+.register_con .info_box .find p {margin: 0 0 10px 0; color: #888;}
+.register_con .info_box .find h3,
+.register_con .info_box .create h3 {font-size: 16px; font-family: 'Domine', serif; font-weight: 500; cursor: pointer;}
+.register_con .info_box .copy {position: absolute; bottom: -40px; left: -10px; color: #888;}

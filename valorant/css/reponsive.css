@@ -1,0 +1,400 @@
+@charset "UTF-8";
+
+@media all and (min-width:0px) and (max-width:1239px){
+    body.open_nav {overflow: hidden;}
+    #header {top: 0 !important; width: 100%; height: 60px !important; overflow: visible;}
+    #header:before {position: fixed; content: ''; top: 0; right: 0; width: 0%; height: 100vh; background: rgba(0, 0 ,0, 0); transition: all 250ms ease-out; z-index: 1;}
+    #header .width_con.no_padding {}
+    #header .width_con.no_padding .btn_home {top: 5px !important;}
+    #header .width_con.no_padding .btn_open_nav {display: block;}
+    #header .width_con.no_padding .nav_con {position: fixed; top: 0; right: -260px; width: 260px; height: 100vh; overflow-y: scroll; background: #111723; box-sizing: border-box; transition: all 250ms ease-in-out;}
+    #header .width_con.no_padding .nav_con:before,
+    #header .width_con.no_padding .nav_con:after {position: fixed; right: -260px; content: ''; width: 260px; height: 20px; pointer-events: none; transition: all 250ms ease-in-out; z-index: 9999;}
+    #header .width_con.no_padding .nav_con:before {top: 0; background: linear-gradient(0deg, rgba(34,34,34,0) 0%, rgba(34,34,34,1) 100%);}
+    #header .width_con.no_padding .nav_con:after {top: calc(100vh - 20px); background: linear-gradient(180deg, rgba(34,34,34,0) 0%, rgba(34,34,34,1) 100%);}
+    #header .width_con.no_padding .nav_con ul li {display: block;}
+    #header .width_con.no_padding .nav_con ul.nav {top: 120px !important; left: 0; padding: 0 40px; z-index: 9;}
+    #header .width_con.no_padding .nav_con ul.nav li {margin: 30px 0 0 0;}
+    #header .width_con.no_padding .nav_con ul.nav li a {}
+    #header .width_con.no_padding .nav_con .btn.btn_c {top: 570px !important; right: 100px;}
+    #header .width_con.no_padding .nav_con ul.nav_customer {top: 600px !important; left: 0; padding: 40px;}
+    #header .width_con.no_padding .nav_con ul.nav_customer li {margin: 20px 0 0 0;}
+    #header .width_con.no_padding .nav_con ul.nav_customer li a {}
+    
+    body.open_nav #header .width_con.no_padding .nav_con,
+    body.open_nav #header .width_con.no_padding .nav_con:before,
+    body.open_nav #header .width_con.no_padding .nav_con:after {right: 0;}
+    
+    .open_nav_cover {position: fixed; top: 0; left: 0; width: 100vw; height: 0vh; background: rgba(0,0,0,0); backdrop-filter: blur(0px); -webkit-backdrop-filter: blur(0px); transition: backdrop-filter 250ms ease-out, height 0s linear 250ms, background 0.25s ease-out; z-index: 8;}
+    body.open_nav .open_nav_cover {height: 100vh; background: rgba(0,0,0,.35); backdrop-filter: blur(3px); -webkit-backdrop-filter: blur(3px); transition: backdrop-filter 250ms ease-out, background 250ms ease-out;}
+    body.open_nav #header .width_con.no_padding .btn_home {filter: blur(3px); opacity: .7; pointer-events: none; transition: all 250ms ease-out;}
+    
+    #agents .width_con .v_con.two_con li ul.agent_list li a:hover {transform: translateX(0px);}
+}
+
+@media all and (min-width:0px) and (max-width:479px){/*----------------------------------------------------------------------------------------------------------*/
+    :root{
+        --margin-x4: 80px;
+        --margin-x2: 40px;
+        --margin: 20px;
+        --margin-half: 10px;
+        --margin-quarter: 5px;
+    }
+    
+    h2 {font-size: 26px;}
+    h3 {font-size: 14px;}
+    h4 {font-size: 11px;}
+    h5 {font-size: 10px;}
+    h6 {font-size: 9px;}
+    .width_con {width: calc(100% - 40px);}
+    .btn_a {width: 120px; height: 35px;}
+    .btn_a a {font-size: 14px; line-height: 32px;}
+    .btn_c {width: 80px; height: 25px;}
+    .btn_c a {font-size: 12px; line-height: 24px;}
+    
+    .desc h6 {font-size:14px; font-weight: 700;}
+    .desc p {font-size:10px; line-height: 1.25em;}
+    
+    .loading_cover .width_con h1 {font-size: 32px;}
+    
+    #visual .width_con .reyna {width: 300px; bottom: -30px; right: -100px;}
+    #visual .width_con .title_con {bottom: 200px; right: 0;}
+    #visual .width_con .title_con .visual_title {width: 250px;}
+    
+    #episode .width_con ul.two_con > li {width: calc(100% - var(--margin));}
+    #episode .width_con ul.v_con li.epi_m {margin: var(--margin) var(--margin-half) 0;}
+    #episode .width_con ul.two_con li .epi_sub {text-align: center; margin: var(--margin) 0 0 0;}
+    #episode .width_con ul.two_con li .epi_sub h5 {margin: 0 0 var(--margin) 0; font-size: 26px;}
+    #episode .width_con ul.two_con li .epi_sub h6 {font-size: 14px;}
+    #episode .width_con ul.two_con li .epi_sub ul.act_list li {margin: 0 var(--margin) 0 0;}
+    
+    #steps .width_con .sp_back_ag {top: 10%; width: 100%;}
+    #steps .width_con .v_con.three_con li {width: calc(100% - var(--margin));}
+    #steps .width_con .back_circle {width: 300px; height: 300px;}
+    #steps .width_con .back_circle:before {width: 150px; height: 150px;}
+    #steps .width_con .v_con.three_con li a .desc {padding: 10px;}
+    #steps .width_con .v_con.three_con li a .desc h5 {font-size: 14px; font-weight: 500; margin: 0 0 5px 0;}
+    #steps .width_con .v_con.three_con li a .desc span {font-size: 9px; line-height: 1.25em;}
+    
+    #agents .width_con .v_con.two_con li ul.agent_list {margin: 0 0 0 40px;}
+    #agents .width_con .v_con.two_con li ul.agent_list li {font-size: 14px;}
+    #agents .width_con .v_con.two_con li ul.agent_list li a {margin: 0 5px 0 0;}
+    #agents .width_con .v_con.two_con li ul.agent_list li span {top: -5px; left: -15px; font-size: 10px;}
+    #agents .width_con .v_con.two_con li ul.agent_list li img {width: 10px;}
+    #agents .width_con .v_con.two_con li .agent {left: -40px;}
+    #agents .width_con .v_con.two_con li .agent img {width: 200px;}
+    #agents .width_con .v_con.two_con li .agent_name {top: 80px; left: -10px;}
+    #agents .width_con .v_con.two_con li .agent_name h2 {font-size: 20px;}
+    #agents .width_con .v_con.two_con li .info_con {top: 150px; left: 0; width: 100px;}
+    #agents .width_con .v_con.two_con li .info_con h6 {font-size: 14px;}
+    #agents .width_con .v_con.two_con li .info_con .ag_pos h5 {font-size: 18px;}
+    #agents .width_con .v_con.two_con li .info_con .ag_pos img {width: 15px; margin: 0 0 0 10px;}
+    #agents .width_con .v_con.two_con li .info_con p {width: 100%; margin: 5px 0 0 0; font-size: 10px;}
+    #agents .width_con .v_con.two_con li .info_con ul.skills li {margin: 0 5px 5px 0;}
+    #agents .width_con .v_con.two_con li .info_con ul.skills li img {width: 18px; padding: 5px;}
+    #agents .width_con .v_con.two_con li .info_con .skill_con {position: absolute; bottom: -15px; left: 70px; width: 100px; height: 100px;}
+    #agents .width_con .v_con.two_con li .info_con .skill_con .desc h6 {font-size: 12px;}
+    #agents .width_con .v_con.two_con li .info_con .skill_con .desc p {font-size: 10px;}
+    #agents .width_con .v_con.two_con li .info_con .skill_con .current_skill {position: absolute; bottom: 10px; right: 0; width: 40px; opacity: .5;}
+    
+    #asenal .ko {top: calc(var(--margin-x4) * -1); right: 0; width: 66%;}
+    #asenal .width_con .title_con {width: 100%;}
+    #asenal .width_con .grid_box {grid-template-columns: repeat(2, 1fr);}
+    #asenal .width_con .grid_box .items:nth-child(1) {grid-column: 1 / 3; grid-row: 1 / 3;}
+    #asenal .width_con .grid_box .items:nth-child(2) {grid-column: 1; grid-row: 3;}
+    #asenal .width_con .grid_box .items:nth-child(3) {grid-column: 1 / 3; grid-row: 4 / 10;}
+    #asenal .width_con .grid_box .items:nth-child(3):before {background: linear-gradient(0deg, #ece8e1 20%, rgba(0, 0, 0, 0) 50%);}
+    #asenal .width_con .grid_box .items:nth-child(4) {grid-column: 2; grid-row: 3;}
+    #asenal .width_con .grid_box .items:nth-child(5) {grid-column: 1; grid-row: 10;}
+    #asenal .width_con .grid_box .items:nth-child(6) {grid-column: 1 / 3; grid-row: 11 / 13;}
+    #asenal .width_con .grid_box .items:nth-child(7) {grid-column: 2; grid-row: 10;}
+    #asenal .width_con .grid_box .items a .desc {padding: var(--margin-half);}
+    #asenal .width_con .grid_box .items a .desc p {margin: 10px 0 0 0; }
+    
+    #rank .width_con .v_con li {width: calc(50% - var(--margin));}
+    
+    #games .width_con ul.v_con li {width: calc(50% - var(--margin)); margin: var(--margin-half);}
+    
+    #news .width_con ul.v_con.two_con > li {width: calc(100% - var(--margin)); margin: var(--margin-half);}
+    #news .width_con ul.v_con.two_con > li:first-child {position: relative; top: 0;}
+    #news .width_con ul.v_con.two_con > li ul.v_con.one_con > li .btn_c {margin: 0 0 0 var(--margin-x2);}
+    #news .width_con ul.v_con.two_con > li .btn.btn_a {margin: var(--margin) auto 0;}
+    
+    #footer .width_con ul.v_con.four_con li {width: calc(50% - var(--margin)); margin: var(--margin-half);}
+    #footer .width_con ul.v_con.f_t_con li {width: calc(100% - var(--margin));}
+    #footer .width_con ul.v_con.four_con li.title h2 {font-size: 18px;}
+    #footer .width_con ul.v_con.four_con li h2 {font-size: 14px;}
+    #footer .width_con ul.v_con.four_con li h3 {font-size: 10px;}
+    #footer .width_con ul.v_con.f_t_con li .require h2 {font-size: 16px;}
+    #footer .width_con ul.v_con.f_t_con li .require table tr.cate td{font-size: 14px;}
+    #footer .width_con ul.v_con.f_t_con li .require table tr.detail td{font-size: 9px;}
+    #footer .width_con ul.v_con.f_t_con li:last-child {width: calc(100% - var(--margin));}
+    #footer .width_con.van ul.v_con.two_con li {vertical-align: middle;}
+    #footer .width_con.van ul.v_con.two_con li .bg_con {width: 100%; margin: 0 auto;}
+    #footer .width_con.van ul.v_con.two_con li .van_title h2 {font-size: 24px;}
+    #footer .width_con.van ul.v_con.two_con li .van_title p {font-size: 10px;}
+    #footer .width_con.ft .copy_box p {font-size: 9px;}
+    #footer .width_con.ft ul.f_info li {margin: var(--margin-half) var(--margin);}
+    #footer .width_con.ft ul.f_info li a {font-size: 12px;}
+}
+
+@media all and (min-width:480px) and (max-width:599px){/*----------------------------------------------------------------------------------------------------------*/
+     :root{
+        --margin-x4: 100px;
+        --margin-x2: 50px;
+        --margin: 25px;
+        --margin-half: 12.5px;
+        --margin-quarter: 5px;
+    }
+    
+    h2 {font-size: 26px;}
+    h3 {font-size: 14px;}
+    h4 {font-size: 11px;}
+    h5 {font-size: 10px;}
+    h6 {font-size: 9px;}
+    .width_con {width: calc(100% - 40px);}
+    .btn_a {width: 120px; height: 35px;}
+    .btn_a a {font-size: 14px; line-height: 32px;}
+    
+    .desc h6 {font-size:14px; font-weight: 700;}
+    .desc p {font-size:10px; line-height: 1.25em;}
+    
+    .loading_cover .width_con h1 {font-size: 32px;}
+    
+    #visual .width_con .reyna {width: 300px; bottom: -40px; right: -100px;}
+    #visual .width_con .title_con {bottom: 200px;}
+    #visual .width_con .title_con .visual_title {width: 250px;}
+    
+    #episode .width_con ul.two_con > li {width: calc(100% - var(--margin));}
+    #episode .width_con ul.v_con li.epi_m {margin: var(--margin) var(--margin-half) 0;}
+    #episode .width_con ul.two_con li .epi_sub {text-align: center; margin: var(--margin) 0 0 0;}
+    #episode .width_con ul.two_con li .epi_sub h5 {margin: 0 0 var(--margin) 0; font-size: 26px;}
+    #episode .width_con ul.two_con li .epi_sub h6 {font-size: 16px;}
+    #episode .width_con ul.two_con li .epi_sub ul.act_list li {margin: 0 var(--margin) 0 0;}
+    
+    #steps .width_con .sp_back_ag {top: 10%; width: 100%;}
+    #steps .width_con .v_con.three_con li {width: calc(100% - var(--margin));}
+    #steps .width_con .back_circle {width: 500px; height: 500px;}
+    #steps .width_con .back_circle:before {width: 350px; height: 350px;}
+    
+    #agents .width_con .v_con.two_con li ul.agent_list {margin: 0 0 0 40px;}
+    #agents .width_con .v_con.two_con li ul.agent_list li {font-size: 40px;}
+    #agents .width_con .v_con.two_con li ul.agent_list li span {font-size: 18px;}
+    #agents .width_con .v_con.two_con li ul.agent_list li img {width: 20px;}
+    #agents .width_con .v_con.two_con li .agent img {width: 300px;}
+    #agents .width_con .v_con.two_con li .agent_name {left: 15px;}
+    #agents .width_con .v_con.two_con li .agent_name h2 {font-size: 40px;}
+    #agents .width_con .v_con.two_con li .info_con {top: 150px; left: 70px; width: 150px;}
+    #agents .width_con .v_con.two_con li .info_con h6 {font-size: 16px;}
+    #agents .width_con .v_con.two_con li .info_con .ag_pos h5 {font-size: 24px;}
+    #agents .width_con .v_con.two_con li .info_con .ag_pos img {width: 20px; margin: 0 10px 0 0;}
+    #agents .width_con .v_con.two_con li .info_con p {width: 100%; margin: 5px 0 0 0; font-size: 10px;}
+    #agents .width_con .v_con.two_con li .info_con ul.skills li {margin: 0 5px 0 0;}
+    #agents .width_con .v_con.two_con li .info_con ul.skills li img {width: 18px; padding: 5px;}
+    #agents .width_con .v_con.two_con li .info_con .skill_con {position: relative; width: 150px; height: 150px;}
+    #agents .width_con .v_con.two_con li .info_con .skill_con .desc h6 {font-size: 16px;}
+    #agents .width_con .v_con.two_con li .info_con .skill_con .desc p {font-size: 10px;}
+    #agents .width_con .v_con.two_con li .info_con .skill_con .current_skill {position: absolute; bottom: 10px; right: 10px; width: 60px; opacity: .5;}
+    
+    #asenal .ko {top: calc(var(--margin-x4) * -1); right: 0; width: 66%;}
+    #asenal .width_con .title_con {width: 100%;}
+    #asenal .width_con .grid_box {grid-template-columns: repeat(4, 1fr);}
+    #asenal .width_con .grid_box .items:nth-child(1) {grid-column: 1 / 3; grid-row: 1 / 3;}
+    #asenal .width_con .grid_box .items:nth-child(2) {grid-column: 1; grid-row: 3;}
+    #asenal .width_con .grid_box .items:nth-child(3) {grid-column: 3 / 5; grid-row: 1 / 7;}
+    #asenal .width_con .grid_box .items:nth-child(3):before {background: linear-gradient(0deg, #ece8e1 20%, rgba(0, 0, 0, 0) 50%);}
+    #asenal .width_con .grid_box .items:nth-child(4) {grid-column: 2; grid-row: 3;}
+    #asenal .width_con .grid_box .items:nth-child(5) {grid-column: 1; grid-row: 4;}
+    #asenal .width_con .grid_box .items:nth-child(6) {grid-column: 1 / 3; grid-row: 5 / 7;}
+    #asenal .width_con .grid_box .items:nth-child(7) {grid-column: 2; grid-row: 4;}
+    #asenal .width_con .grid_box .items a .desc {padding: var(--margin-half);}
+    #asenal .width_con .grid_box .items a .desc h6 {font-size:14px; font-weight: 700;}
+    #asenal .width_con .grid_box .items a .desc p {font-size:10px; margin: 10px 0 0 0; line-height: 1.25em;}
+    
+    #rank .width_con .v_con li {width: calc(50% - var(--margin)); margin: var(--margin-half);}
+    
+    #games .width_con ul.v_con li {width: calc(50% - var(--margin)); margin: var(--margin-half);}
+    
+    #news .width_con ul.v_con.two_con > li {width: calc(100% - var(--margin)); margin: var(--margin-half);}
+    #news .width_con ul.v_con.two_con > li:first-child {position: relative; top: 0;}
+    #news .width_con ul.v_con.two_con > li .btn.btn_a {margin: var(--margin) auto 0;}
+    
+    #footer .width_con ul.v_con.four_con li {width: calc(50% - var(--margin)); margin: var(--margin-half);}
+    #footer .width_con ul.v_con.f_t_con li {width: calc(100% - var(--margin));}
+    #footer .width_con ul.v_con.four_con li.title h2 {font-size: 24px;}
+    #footer .width_con ul.v_con.four_con li h2 {font-size: 16px;}
+    #footer .width_con ul.v_con.four_con li h3 {font-size: 12px;}
+    #footer .width_con ul.v_con.f_t_con li .require h2 {font-size: 20px;}
+    #footer .width_con ul.v_con.f_t_con li .require table tr.cate td{font-size: 16px;}
+    #footer .width_con ul.v_con.f_t_con li .require table tr.detail td{font-size: 10px;}
+    #footer .width_con ul.v_con.f_t_con li:last-child {width: calc(100% - var(--margin));}
+    #footer .width_con.van ul.v_con.two_con li {vertical-align: middle;}
+    #footer .width_con.van ul.v_con.two_con li .bg_con {width: 100%; margin: 0 auto;}
+    #footer .width_con.van ul.v_con.two_con li .van_title h2 {font-size: 24px;}
+    #footer .width_con.van ul.v_con.two_con li .van_title p {font-size: 10px;}
+    #footer .width_con.ft .copy_box p {font-size: 9px;}
+    #footer .width_con.ft ul.f_info li {margin: var(--margin-half) var(--margin);}
+    #footer .width_con.ft ul.f_info li a {font-size: 12px;}
+}
+
+@media all and (min-width:600px) and (max-width:999px){/*----------------------------------------------------------------------------------------------------------*/
+    :root{
+        --margin-x4: 120px;
+        --margin-x2: 60px;
+        --margin: 30px;
+        --margin-half: 15px;
+        --margin-quarter: 7.5px;
+    }
+    
+    h2 {font-size: 38px;}
+    h3 {font-size: 22px;}
+    h4 {font-size: 12px;}
+    h5 {font-size: 11px;}
+    h6 {font-size: 10px;}
+    .width_con {width: calc(100% - 60px);}
+    .btn_a {width: 120px; height: 35px;}
+    .btn_a a {font-size: 14px; line-height: 32px;}
+    
+    .desc h6 {font-size:14px; font-weight: 700;}
+    .desc p {font-size:10px; line-height: 1.25em;}
+    
+    .loading_cover .width_con h1 {font-size: 40px;}
+    
+    #visual .width_con .reyna {width: 350px; bottom: -50px;}
+    #visual .width_con .title_con .visual_title {width: 300px;}
+    
+    #episode .width_con ul.two_con > li {width: calc(100% - var(--margin));}
+    #episode .width_con ul.v_con li.epi_m {margin: var(--margin) var(--margin-half) 0;}
+    #episode .width_con ul.two_con li .epi_sub {text-align: center; margin: var(--margin) 0 0 0;}
+    #episode .width_con ul.two_con li .epi_sub h5 {margin: 0 0 var(--margin) 0; font-size: 30px;}
+    #episode .width_con ul.two_con li .epi_sub h6 {font-size: 20px;}
+    #episode .width_con ul.two_con li .epi_sub ul.act_list li {margin: 0 var(--margin) 0 0;}
+    
+    #steps .width_con .v_con.three_con li {width: calc(50% - var(--margin));}
+    #steps .width_con .v_con.three_con li a .desc {padding: 10px;}
+    #steps .width_con .v_con.three_con li a .desc h5 {font-size: 14px; font-weight: 500; margin: 0 0 10px 0;}
+    #steps .width_con .v_con.three_con li a .desc span {font-size: 9px; line-height: 1.25em;}
+    #steps .width_con .back_circle {width: 500px; height: 500px;}
+    #steps .width_con .back_circle:before {width: 350px; height: 350px;}
+    
+    #agents .width_con .v_con.two_con li ul.agent_list {margin: 0 0 0 40px;}
+    #agents .width_con .v_con.two_con li ul.agent_list li {font-size: 40px;}
+    #agents .width_con .v_con.two_con li ul.agent_list li span {font-size: 18px;}
+    #agents .width_con .v_con.two_con li ul.agent_list li img {width: 20px;}
+    #agents .width_con .v_con.two_con li .agent img {width: 300px;}
+    #agents .width_con .v_con.two_con li .agent_name h2 {font-size: 40px;}
+    #agents .width_con .v_con.two_con li .info_con {top: 150px; left: 100px; width: 150px;}
+    #agents .width_con .v_con.two_con li .info_con h6 {font-size: 16px;}
+    #agents .width_con .v_con.two_con li .info_con .ag_pos h5 {font-size: 24px;}
+    #agents .width_con .v_con.two_con li .info_con .ag_pos img {width: 20px; margin: 0 10px 0 0;}
+    #agents .width_con .v_con.two_con li .info_con p {width: 100%; margin: var(--margin-half) 0 0 0; font-size: 10px;}
+    #agents .width_con .v_con.two_con li .info_con ul.skills li {margin: 0 5px 0 0;}
+    #agents .width_con .v_con.two_con li .info_con ul.skills li img {width: 18px; padding: 5px;}
+    #agents .width_con .v_con.two_con li .info_con .skill_con {position: relative; width: 150px; height: 150px;}
+    #agents .width_con .v_con.two_con li .info_con .skill_con .desc h6 {font-size: 16px;}
+    #agents .width_con .v_con.two_con li .info_con .skill_con .desc p {font-size: 11px;}
+    #agents .width_con .v_con.two_con li .info_con .skill_con .current_skill {position: absolute; bottom: 10px; right: 10px; width: 60px; opacity: .5;}
+    
+    #asenal .ko {top: calc(var(--margin-x4) * -1); right: 0; width: 66%;}
+    #asenal .width_con .title_con {width: 100%;}
+    #asenal .width_con .grid_box {grid-template-columns: repeat(4, 1fr);}
+    #asenal .width_con .grid_box .items:nth-child(1) {grid-column: 1 / 3; grid-row: 1 / 3;}
+    #asenal .width_con .grid_box .items:nth-child(2) {grid-column: 1; grid-row: 3;}
+    #asenal .width_con .grid_box .items:nth-child(3) {grid-column: 3 / 5; grid-row: 1 / 7;}
+    #asenal .width_con .grid_box .items:nth-child(3):before {background: linear-gradient(0deg, #ece8e1 20%, rgba(0, 0, 0, 0) 50%);}
+    #asenal .width_con .grid_box .items:nth-child(4) {grid-column: 2; grid-row: 3;}
+    #asenal .width_con .grid_box .items:nth-child(5) {grid-column: 1; grid-row: 4;}
+    #asenal .width_con .grid_box .items:nth-child(6) {grid-column: 1 / 3; grid-row: 5 / 7;}
+    #asenal .width_con .grid_box .items:nth-child(7) {grid-column: 2; grid-row: 4;}
+    #asenal .width_con .grid_box .items a .desc {padding: var(--margin-half);}
+    #asenal .width_con .grid_box .items a .desc h6 {font-size:14px; font-weight: 700;}
+    #asenal .width_con .grid_box .items a .desc p {font-size:10px; margin: 10px 0 0 0; line-height: 1.25em;}
+    
+    #rank .width_con .v_con li {width: calc(25% - var(--margin)); margin: var(--margin-half);}
+    
+    #news .width_con ul.v_con.two_con > li {width: calc(100% - var(--margin)); margin: var(--margin-half);}
+    #news .width_con ul.v_con.two_con > li:first-child {position: relative; top: 0;}
+    #news .width_con ul.v_con.two_con > li .btn.btn_a {margin: var(--margin) auto 0;}
+    
+    #footer .width_con ul.v_con.four_con li {width: calc(50% - var(--margin)); margin: var(--margin-half);}
+    #footer .width_con ul.v_con.f_t_con li {width: calc(100% - var(--margin));}
+    #footer .width_con ul.v_con.four_con li.title h2 {font-size: 32px;}
+    #footer .width_con ul.v_con.f_t_con li:last-child {width: calc(100% - var(--margin));}
+    #footer .width_con.van ul.v_con.two_con li {vertical-align: middle;}
+    #footer .width_con.van ul.v_con.two_con li .van_title h2 {font-size: 32px;}
+    #footer .width_con.van ul.v_con.two_con li .van_title p {font-size: 12px;}
+}
+
+@media all and (min-width:1000px) and (max-width:1239px){/*----------------------------------------------------------------------------------------------------------*/
+    :root{
+        --margin-x4: 140px;
+        --margin-x2: 70px;
+        --margin: 35px;
+        --margin-half: 17.5px;
+        --margin-quarter: 8.5px;
+    }
+    
+    h2 {font-size: 38px;}
+    h3 {font-size: 22px;}
+    h4 {font-size: 12px;}
+    h5 {font-size: 11px;}
+    h6 {font-size: 10px;}
+    .width_con {width: calc(100% - 80px);}
+    
+    #visual .width_con .reyna {width: 400px; bottom: -60px;}
+    #visual .width_con .title_con .visual_title {width: 400px;}
+    
+    #episode .width_con ul.two_con > li {width: calc(100% - var(--margin));}
+    #episode .width_con ul.v_con li.epi_m {margin: var(--margin) var(--margin-half) 0;}
+    #episode .width_con ul.two_con li .epi_sub {text-align: center; margin: var(--margin) 0 0 0;}
+    #episode .width_con ul.two_con li .epi_sub h5 {margin: 0 0 var(--margin) 0; font-size: 38px;}
+    #episode .width_con ul.two_con li .epi_sub h6 {font-size: 20px;}
+    #episode .width_con ul.two_con li .epi_sub ul.act_list li {margin: 0 var(--margin) 0 0;}
+    
+    #steps .width_con .v_con.three_con li {width: calc(50% - var(--margin));}
+    
+    #agents .width_con .v_con.two_con li ul.agent_list {margin: 0 0 0 40px;}
+    #agents .width_con .v_con.two_con li ul.agent_list li {font-size: 60px;}
+    #agents .width_con .v_con.two_con li .info_con {top: 230px; left: 180px; width: 260px;}
+    #agents .width_con .v_con.two_con li .agent img {width: 400px;}
+    #agents .width_con .v_con.two_con li .agent_name h2 {font-size: 60px;}
+    
+    
+    #rank .width_con .v_con li {width: calc(25% - var(--margin)); margin: var(--margin-half);}
+    
+    #news .width_con ul.v_con.two_con > li {width: calc(100% - var(--margin)); margin: var(--margin-half);}
+    #news .width_con ul.v_con.two_con > li:first-child {position: relative; top: 0;}
+    #news .width_con ul.v_con.two_con > li .btn.btn_a {margin: var(--margin) auto 0;}
+    
+    #footer .width_con ul.v_con.four_con li {width: calc(50% - var(--margin)); margin: var(--margin-half);}
+    #footer .width_con.van ul.v_con.two_con li .bg_con {width: 40%; margin: 0 auto;}
+}
+
+@media all and (min-width:1240px) and (max-width:1449px){/*----------------------------------------------------------------------------------------------------------*/
+    h2 {font-size: 50px;}
+    h3 {font-size: 28px;}
+    h4 {font-size: 14px;}
+    h5 {font-size: 12px;}
+    h6 {font-size: 11px;}
+    .width_con {width: 1200px;}
+    
+    #header {width: 1200px;}
+    
+    #visual .width_con .reyna {width: 400px;}
+    #visual .width_con .title_con .visual_title {width: 400px;}
+    
+    #episode .width_con ul.two_con > li {width: calc(100% - var(--margin));}
+    #episode .width_con ul.v_con li.epi_m {margin: var(--margin) var(--margin-half) 0;}
+    #episode .width_con ul.two_con li .epi_sub {text-align: center; margin: var(--margin) 0 0 0;}
+    #episode .width_con ul.two_con li .epi_sub ul.act_list li {margin: 0 var(--margin) 0 0;}
+    
+    #steps .width_con .v_con.three_con li a .desc h5 {font-size: 18px; font-weight: 500; margin: 0 0 10px 0;}
+    #steps .width_con .v_con.three_con li a .desc span {font-size: 12px; line-height: 1.25em;}
+    
+    #agents .width_con .v_con.two_con li .info_con {top: 200px; left: 300px; width: 260px;}
+    #agents .width_con .v_con.two_con li .agent img {width: 450px;}
+}
+
+@media all and (min-width:1450px){/*---------------------------------------------------------------------------------------------------------------------------------*/
+    #agents .width_con .v_con.two_con li .info_con {top: 200px;}
+}

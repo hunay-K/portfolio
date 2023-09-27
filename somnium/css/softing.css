@@ -1,0 +1,72 @@
+.softing {position: fixed; top: 50%; left: 10%; width: 1000px; margin: -250px 0 0 30px; animation: spin 30s ease-in-out 1.5s infinite; animation: color_ch 30s ease-in-out infinite; opacity: .5; z-index: -1;}
+
+@keyframes spin{
+    0% {transform: rotate(0deg);}
+    50% {transform: rotate(360deg);}
+    100% {transform: rotate(720deg);}
+}
+
+@keyframes color_ch{
+    25% {filter: hue-rotate(90deg);}
+    50% {filter: hue-rotate(180deg);}
+    75% {filter: hue-rotate(270deg);}
+    100% {filter: hue-rotate(360deg);}
+}
+.softing .circle {max-width: 300px; height: 300px; box-sizing: border-box; border-radius: 50%; transition: all 5s ease-in-out; filter: blur(40px); mix-blend-mode: overlay;}
+.softing .circle:before {position: absolute; content: ''; top: -50px; left: -50px; bottom: -50px; right: -50px; border-radius: 50%; filter: blur(40px); mix-blend-mode: overlay;}
+
+.softing .circle.circle1,
+.softing .circle.circle1:before {background: linear-gradient(90deg, #ecf5ff, #f2f2f2);}
+
+.softing .circle.circle1 {animation: spin1 10s ease-in-out infinite;}
+
+@keyframes spin1{
+    0%% {transform: translateX(0) rotate(0deg);}
+    50% {transform: translateX(300px) rotate(360deg);}
+    100% {transform: translateX(0) rotate(720deg);}
+}
+
+.softing .circle.circle2,
+.softing .circle.circle2:before {background: linear-gradient(90deg, #fae0b3, #fb9f02);}
+
+.softing .circle.circle2 {animation: spin2 16s ease-in-out infinite;}
+
+@keyframes spin2{
+    0%% {transform: translateX(0) rotate(0deg);}
+    50% {transform: translateX(200px) rotate(-360deg); filter: blur(10px);}
+    100% {transform: translateX(0) rotate(-720deg); filter: blur(40px);}
+}
+
+.softing .circle.circle3,
+.softing .circle.circle3:before {background: linear-gradient(90deg, #f2f2f2, #7228ff);}
+
+.softing .circle.circle3 {position: absolute; top: 50%; left: 50%; width: 300px; height: 300px; margin: -100px 0 0 -100px; animation: spin3 20s ease-in-out infinite;}
+
+@keyframes spin3{
+    0%% {transform: translateY(0) rotate(0deg);}
+    50% {transform: translateY(200px)rotate(360deg); filter: blur(10px);}
+    100% {transform: translateY(0)rotate(720deg); filter: blur(40px);}
+}
+
+
+.softing .circle.circle4,
+.softing .circle.circle4:before {background: linear-gradient(90deg, #2769ba, #046ae7);}
+
+.softing .circle.circle4 {position: absolute; top: 50%; left: 50%; width: 300px; height: 300px; margin: -150px 0 0 -150px; animation: spin4 25s ease-in-out infinite;}
+
+@keyframes spin4{
+    0%% {transform: translateY(0) rotate(0deg);}
+    50% {transform: translateY(-200px)rotate(-360deg); filter: blur(10px);}
+    100% {transform: translateY(0)rotate(-720deg); filter: blur(40px);}
+}
+
+.softing .circle.circle5,
+.softing .circle.circle5:before {background: linear-gradient(90deg, #f2f2f2, #ebf4ff);}
+
+.softing .circle.circle5 {position: absolute; top: 50%; left: 50%; width: 300px; height: 300px; border-radius: 60% 70% 90% 100% / 110% 90% 120% 100%; margin: -250px 0 0 -250px; animation: spin5 30s ease-in-out infinite;}
+
+@keyframes spin5{
+    0%% {transform: rotate(0deg);}
+    50% {transform: rotate(360deg); filter: blur(10px);}
+    100% {transform: rotate(720deg); filter: blur(40px);}
+}
